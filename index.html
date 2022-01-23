@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Maria's Portfolio</title>
+</head>
+<body>
+    <header>
+        <div class="topContainer">
+            <div>
+                <p id="myName">@MARIADALPUIM</p>
+            </div>
+            <div class="logos">
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-github"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+            <nav class="optionsBar">
+                <div class="optionsButton">
+                    <button class="collapsible mobileView" type="button">Menu</button>
+                  <!-- waiting to learn javascript to include this options.
+                    idea: we see the button and when clicking we see
+                    expanded options - for now we see only the button -->
+                <!-- <ul class="buttonContent mobileView"> 
+                    <li>About</li> 
+                    <li>Portfolio</li>
+                    <li>Contact</li>
+                </ul> -->
+                </div>
+                <div class="optionsList desktopView">
+                    <ul> 
+                        <li>About</li> 
+                        <li>Portfolio</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <section class="heroSection">
+            <img class="heroImage" src="./img/lum3n--RBuQ2PK_L8-unsplash.jpg" alt="technology image">
+            <div class="heroText">
+                <p>&lt;Hello World&gt;</p>
+                <h1>I'm Maria</h1>
+                <p>Soon to be a Front End Developer!</p>
+                <button class="hireMe">Let's talk!</button>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="about">
+            <h1>About me</h1>
+            <p>
+            <img id="aboutImage" src="./img/kari-shea-1SAnrIxw5OY-unsplash.jpg" alt="testing">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ipsam tenetur? Sed, nam placeat laborum autem nihil esse nemo vel minus voluptas ducimus, numquam animi doloribus similique exercitationem id asperiores.    
+            </p>
+        </section>
+        <section class="portfolio">
+            <h1>Portfolio</h1>
+            <section class="portfolioBox">
+                <div class="p1">
+                    <h2>Project 1</h2>
+                </div>
+                <div class="p2">
+                    <h2>Project 2</h2>
+                </div>
+                <div class="p3">
+                    <h2>Project 3</h2>
+                </div>
+            </section>
+        </section>
+        <section class="contact">
+            <h1>Get in touch</h1>
+            <div class="contactFlex">
+                <div class="formContainer">
+                    <label for="name">Name</label><br>
+                    <input type="text" name="name" id="name"><br>
+
+                    <label for="email">E-mail</label><br>
+                    <input type="email" name="email" id="email"><br>
+
+                    <label for="message">Your message</label><br>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea><br>
+
+                    <!-- yet to find out if this works -->
+                    <form action="mailto:mariadalpuim@gmail.com" method="get" enctype="text/plain"></form>
+                    <input type="submit" value="Send me your message">
+                </div>
+                <div class="socialMedia">
+                    <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-github"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>CopyRight</p>
+        <p>©</p>
+        <p>MARIADALPUIM</p>
+
+    </footer>
+</body>
+</html>

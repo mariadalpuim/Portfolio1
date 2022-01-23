@@ -1,0 +1,125 @@
+* {
+  color: black;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-color: #ffe100;
+  display: block;
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero {
+  width: 900px;
+  display: block;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  position: relative;
+}
+
+.hero-text {
+  background-color: rgba(255, 242, 117, 0.5);
+  display: inline-block;
+  border-radius: 5px;
+  padding: 15px;
+  position: absolute;
+  top: 200px;
+  right: 200px;
+  text-align: center;
+}
+
+.hire-me {
+  margin-top: 30px;
+  padding: 5px 10px;
+  background-color: #ffc702;
+  border: none;
+}
+
+.about,
+.portfolio,
+.contact {
+  background-color: #ffc702;
+  margin: 5px 0px;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.project1,
+.project2,
+.project3 {
+  padding: 100px 50px;
+  background-color: rgba(255, 242, 117, 0.5);
+  border: 1px solid #000000;
+  margin-left: 10px;
+}
+/* .project2 {
+  
+}
+.project3 {
+  
+} */
+
+@media screen and (min-width: 640px) {
+  .flex-container {
+    display: flex;
+  }
+
+  .project1 {
+  }
+  .project2 {
+  }
+  .project3 {
+  }
+}
+
+.form-container {
+  background-color: rgba(255, 242, 117, 0.5);
+  display: inline-block;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 5px;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #ffc702;
+  border: none;
+}
+
+footer {
+  text-align: center;
+}
+
+#logos {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  height: 75px;
+}
+
+#logos i {
+  position: absolute;
+  color: white;
+  font-size: 40px;
+}
+
+/* The 3 columns on the portfolio should go down 
+to 2 on an Ipad size screen and one on a mobile. 
+The form should go from two columns on a desktop 
+to 1 column on a Ipad or Phone. You can achieve 
+this using flexbox and media queries. If you 
+get stuck – Google! CodePen is a great place to 
+look for examples of how people have done things. */
