@@ -1,4 +1,31 @@
 /* ----------- defaults -----------  */
+/* ----------- body ----------- */
+/* ----------- header ----------- */
+/* topContainer (myName, logos) Nav (optionsBar, button, optionsList), heroSection */
+/* ----------- TOP ----------- */
+/* ----------- NAV ----------- */
+/* ----------- HERO ----------- */
+
+/* ----------- main ----------- */
+/* about, portfolio (p1, p2, p3), contact (form, social media) */
+/* ----------- section ABOUT ----------- */
+/* text and image */
+/* ----------- section PORTFOLIO ----------- */
+/* container, p1, p2, p3 */
+/* ----------- section CONTACT ----------- */
+/* title, form, social media */
+
+/* ----------- footer ----------- */
+/* Name, copyright */
+
+/* MOBILE FIRST APPROACH - TABLET BELLOW */
+/* MOBILE FIRST APPROACH - MOBILE BELLOW */
+/* main changes: 
+      changes header topContainer nav list
+      header hero sizing 
+      portfolio */
+
+/* ----------- defaults -----------  */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +33,8 @@
 }
 
 button,
-input[type="submit"] {
+input[type="submit"],
+li {
   cursor: pointer;
   border: none;
   border-radius: 5px;
@@ -33,6 +61,7 @@ body {
   align-items: center;
   padding-left: 10px;
   padding-right: 10px;
+  top: 0px;
   /* how do I make this the whole line and not transparent? it's not on top of the next absolute */
   /* why there's a space at the top? */
   background-color: rgba(179, 207, 210, 255);
@@ -58,7 +87,7 @@ body {
 
 /* ----------- NAV ----------- */
 .collapsible {
-  background-color: rgb(247, 218, 165);
+  background-color: rgba(229, 197, 198, 255);
   font-size: 30px;
   padding: 8px 12px;
   margin: 3px;
@@ -194,19 +223,27 @@ footer {
 }
 
 /* MOBILE FIRST APPROACH - TABLET BELLOW */
-@media screen and (min-width: 375px) and (max-width: 768px) {
-  selector {
-  }
+@media screen and (min-width: 400px) and (max-width: 768px) {
+  /* body {
+    background-color: yellowgreen;
+  } */
 }
+
+/* need to ajudt item here after destkop */
 
 /* MOBILE FIRST APPROACH - DESKTOP BELLOW */
 @media screen and (min-width: 769px) {
+  /* ----------- defaults -----------  */
+
   .mobileView {
     display: none;
   }
+
   .desktopView {
-    display: block;
+    display: inline;
   }
+
+  /* ----------- body ----------- */
 
   body {
     /* display: block;
@@ -227,7 +264,55 @@ footer {
     padding: 5px;
   } */
 
-  /* Will I need these two stylings?
+  /* ----------- header ----------- */
+  /* topContainer (myName, logos) Nav (optionsBar, button, optionsList), heroSection */
+  /* ----------- TOP ----------- */
+
+  /* ----------- NAV ----------- */
+
+  /* reversing the order of the top components */
+  .topContainer {
+    display: flex;
+  }
+
+  #myName {
+    order: 1;
+  }
+  #logos {
+    order: 3;
+  }
+  #navOptions {
+    order: 2;
+    flex-grow: 1;
+  }
+
+  .optionsList {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+  }
+
+  .optionsList li {
+    background-color: rgba(229, 197, 198, 255);
+    padding: 5px 10px;
+    margin: 10px;
+  }
+
+  .logos {
+    display: flex;
+    width: 15vw;
+    height: 75px;
+    align-items: center;
+  }
+
+  .logos i {
+    color: white;
+    font-size: 30px;
+  }
+
+  /* ----------- HERO ----------- */
+
+  /* Will I need these two hero stylings?
   .hero {
     width: 900px;
     display: block;
@@ -257,14 +342,6 @@ footer {
     I want to fade/blur the edges but isn't working
     https://codepen.io/burtclan/pen/mLqxC 
     https://stackoverflow.com/questions/24709915/blur-the-edges-of-an-image-or-background-image-with-css*/
-  }
-
-  .buttonContent {
-    right: 0px;
-    top: 75px;
-    background-color: rgba(179, 207, 210, 0.5);
-    list-style-type: none;
-    padding: 20px 20px;
   }
 
   .portfolioBox {
