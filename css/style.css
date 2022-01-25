@@ -24,12 +24,15 @@ body {
 }
 
 /* ----------- header ----------- */
-/* topContainer (myName, logos, Nav optionsBar), heroSection */
+/* topContainer (myName, logos) Nav (optionsBar, button, optionsList), heroSection */
 /* ----------- TOP ----------- */
 .topContainer {
   display: flex;
   position: fixed;
   width: 100%;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
   /* how do I make this the whole line and not transparent? it's not on top of the next absolute */
   /* why there's a space at the top? */
   background-color: rgba(179, 207, 210, 255);
@@ -43,8 +46,9 @@ body {
   display: flex;
   width: 75vw;
   height: 75px;
-  align-items: center;
+  /* gap: 30px; not needed because of next line */
   justify-content: space-evenly;
+  align-items: center;
 }
 
 .logos i {
@@ -55,6 +59,18 @@ body {
 /* ----------- NAV ----------- */
 .collapsible {
   background-color: rgb(247, 218, 165);
+  font-size: 30px;
+  padding: 8px 12px;
+  margin: 3px;
+}
+
+.buttonContent {
+  position: fixed;
+  right: 0px;
+  top: 75px;
+  background-color: rgba(179, 207, 210, 0.5);
+  list-style-type: none;
+  padding: 20px 20px;
 }
 
 /* ----------- HERO ----------- */
@@ -72,6 +88,7 @@ header {
 
 .heroSection img {
   width: 100%;
+  margin-top: 75px;
 }
 
 .heroText {
@@ -80,7 +97,7 @@ header {
   border-radius: 5px;
   padding: 5px;
   position: absolute;
-  top: 35px;
+  top: 100px;
   left: 20px;
   text-align: center;
 }
@@ -132,6 +149,10 @@ header {
   text-align: center;
   margin: 10px;
   border: 1px solid grey;
+  background-color: rgba(179, 207, 210, 0.5);
+  /* think about this color. at the moment
+  same with transparency, but because behind
+  it has the same color, we can't see it*/
 }
 
 /* ----------- section CONTACT ----------- */
@@ -157,6 +178,11 @@ input[type="submit"] {
   margin-top: 5px;
   padding: 5px 10px;
   background-color: rgba(248, 196, 228, 0.5);
+}
+
+.socialMedia {
+  display: flex;
+  flex-direction: column;
 }
 
 /* ----------- footer ----------- */
@@ -222,8 +248,8 @@ footer {
     text-align: center; 
   }*/
 
-  .heroImage {
-    width: 200px;
+  .heroSection img {
+    width: 700px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -233,7 +259,26 @@ footer {
     https://stackoverflow.com/questions/24709915/blur-the-edges-of-an-image-or-background-image-with-css*/
   }
 
+  .buttonContent {
+    right: 0px;
+    top: 75px;
+    background-color: rgba(179, 207, 210, 0.5);
+    list-style-type: none;
+    padding: 20px 20px;
+  }
+
   .portfolioBox {
     display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* it makes the container all be 
+  the possible size, distributed 
+  equally by all as all have the value 
+  of 1 mesasurament. */
+  .p1,
+  .p2,
+  .p3 {
+    flex-grow: 1;
   }
 }

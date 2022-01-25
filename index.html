@@ -19,27 +19,31 @@
                 <i class="fab fa-github"></i>
                 <i class="fab fa-instagram"></i>
             </div>
-            <nav class="optionsBar">
-                <div class="optionsButton">
-                    <button class="collapsible mobileView" type="button">Menu</button>
-                  <!-- waiting to learn javascript to include this options.
-                    idea: we see the button and when clicking we see
-                    expanded options - for now we see only the button -->
-                <!-- <ul class="buttonContent mobileView"> 
+            <div class="optionsButton mobileView">
+                <button class="collapsible" type="button"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <nav class="optionsBar">
+            <div>
+                <!-- waiting to learn javascript to 
+                    make this list only appear when 
+                    clicking in the menu.
+                 -->
+               <ul class="buttonContent mobileView"> 
+                   <li>About</li> 
+                   <li>Portfolio</li>
+                   <li>Contact</li>
+               </ul>
+            </div>
+        <!-- same list as about, but only for desktop view -->
+            <div class="optionsList desktopView">
+                <ul> 
                     <li>About</li> 
                     <li>Portfolio</li>
                     <li>Contact</li>
-                </ul> -->
-                </div>
-                <div class="optionsList desktopView">
-                    <ul> 
-                        <li>About</li> 
-                        <li>Portfolio</li>
-                        <li>Contact</li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+                </ul>
+            </div>
+        </nav>
         <section class="heroSection">
             <img class="heroImage" src="./img/lum3n--RBuQ2PK_L8-unsplash.jpg" alt="technology image">
             <div class="heroText">
@@ -70,6 +74,19 @@
                 <div class="p3">
                     <h2>Project 3</h2>
                 </div>
+<!-- only to play around with flex now -->
+                <!-- <div class="p3">
+                    <h2>Project 3</h2>
+                </div>
+                <div class="p3">
+                    <h2>Project 3</h2>
+                </div>
+                <div class="p3">
+                    <h2>Project 3</h2>
+                </div>
+                <div class="p3">
+                    <h2>Project 3</h2>
+                </div> -->
             </section>
         </section>
         <section class="contact">
