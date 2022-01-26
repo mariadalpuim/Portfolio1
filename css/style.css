@@ -76,7 +76,7 @@ input[type="submit"] {
 /* ----------- body ----------- */
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: rgba(229, 195, 195, 255);
+  background-color: rgba(179, 207, 210, 255);
   /* background-image: linear-gradient(to bottom right, #ecd3d7, #e8c9cc); */
 }
 
@@ -142,6 +142,7 @@ I don't think I need this
 
 header {
   position: relative;
+  background-color: rgba(229, 195, 195, 255);
 }
 
 .heroSection img {
@@ -197,7 +198,7 @@ header {
 
 .portfolioCard {
   /* background-color: rgba(206, 175, 175, 0.5); */
-  width: 95%;
+  width: 90vw;
   margin-right: auto;
   margin-left: auto;
   background-color: rgba(229, 195, 195, 1);
@@ -277,16 +278,25 @@ footer {
 }
 
 /* MOBILE FIRST APPROACH - TABLET BELLOW */
-@media screen and (min-width: 400px) and (max-width: 768px) {
+@media screen and (min-width: 501px) and (max-width: 800px) {
   /* body {
     background-color: yellowgreen;
   } */
+
+  .portfolioCards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .portfolioCard {
+    width: 45vw;
+  }
 }
 
 /* need to ajudt item here after destkop */
 
 /* MOBILE FIRST APPROACH - DESKTOP BELLOW */
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 801px) {
   /* ----------- defaults -----------  */
 
   .mobileView {
@@ -410,21 +420,18 @@ footer {
     flex-wrap: wrap;
   }
 
-  .portfolioBox {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  /* it makes the container all be 
-  the possible size, distributed 
-  equally by all as all have the value 
-  of 1 mesasurament. */
-  .p1,
-  .p2,
-  .p3 {
-    flex-grow: 1;
+  .portfolioCard {
+    width: 30vw;
   }
 
   /* ----------- section CONTACT ----------- */
   /* title, form, social media */
+}
+
+/* MOBILE FIRST APPROACH - LARGE DESKTOP BELLOW */
+@media screen and (min-width: 1441px) {
+  .portfolioCard {
+    width: 24vw;
+  }
+  /* why isn't it working? changes all to prior to quiries. */
 }
