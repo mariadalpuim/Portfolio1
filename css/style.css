@@ -25,6 +25,13 @@
       header hero sizing 
       portfolio */
 
+/* colors: 
+  titles rgb(68, 58, 58)
+  other text rgb(114, 97, 97)
+  main background rgba(229, 195, 195, 255)
+  second background rgba(179, 207, 210, 255)
+  blurr backgrounds rgb(206,175,175) */
+
 /* ----------- defaults -----------  */
 * {
   margin: 0;
@@ -32,9 +39,31 @@
   box-sizing: border-box;
 }
 
+h1,
+h2 {
+  color: rgb(68, 58, 58);
+}
+
+h2 {
+  font-size: 20px;
+}
+
+p {
+  color: rgb(114, 97, 97);
+}
+
+span {
+  font-weight: bold;
+}
+
 button,
-input[type="submit"],
-li {
+a {
+  font-weight: bold;
+  color: rgb(68, 58, 58);
+}
+
+button,
+input[type="submit"] {
   cursor: pointer;
   border: none;
   border-radius: 5px;
@@ -47,7 +76,7 @@ li {
 /* ----------- body ----------- */
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: rgba(229, 197, 198, 255);
+  background-color: rgba(229, 195, 195, 255);
   /* background-image: linear-gradient(to bottom right, #ecd3d7, #e8c9cc); */
 }
 
@@ -121,7 +150,7 @@ header {
 }
 
 .heroText {
-  background-color: rgba(248, 196, 228, 0.5);
+  background-color: rgba(206, 175, 175, 0.5);
   display: inline-block;
   border-radius: 5px;
   padding: 5px;
@@ -158,10 +187,6 @@ header {
   padding: 5px;
 }
 
-#aboutImage {
-  width: 200px;
-  float: right;
-}
 /* ----------- section PORTFOLIO ----------- */
 /* container, p1, p2, p3 */
 
@@ -170,18 +195,47 @@ header {
   padding: 5px;
 }
 
-.p1,
-.p2,
-.p3 {
-  padding-top: 5px;
-  padding-bottom: 80px;
+.portfolioCard {
+  /* background-color: rgba(206, 175, 175, 0.5); */
+  width: 95%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgba(229, 195, 195, 1);
+  margin-bottom: 20px;
+  /* border: 1px solid grey; */
+}
+
+.portfolioItemTitle {
   text-align: center;
-  margin: 10px;
-  border: 1px solid grey;
-  background-color: rgba(179, 207, 210, 0.5);
-  /* think about this color. at the moment
-  same with transparency, but because behind
-  it has the same color, we can't see it*/
+}
+
+.portfolioImage {
+  font-size: 200px;
+  color: rgba(179, 207, 210, 255);
+  background-color: white;
+  text-align: center;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portfolioInfo {
+  font-size: 14px;
+  text-align: justify;
+  margin: 10px 25px;
+}
+
+.portfolioLinks {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.portfolioLinks a {
+  font-size: 14px;
+  text-decoration: none;
+  background-color: rgba(179, 207, 210, 255);
+  border-radius: 5px;
+  padding: 8px;
 }
 
 /* ----------- section CONTACT ----------- */
@@ -344,6 +398,18 @@ footer {
     https://stackoverflow.com/questions/24709915/blur-the-edges-of-an-image-or-background-image-with-css*/
   }
 
+  /* ----------- main ----------- */
+  /* about, portfolio (p1, p2, p3), contact (form, social media) */
+  /* ----------- section ABOUT ----------- */
+  /* text and image */
+  /* ----------- section PORTFOLIO ----------- */
+  /* container, p1, p2, p3 */
+
+  .portfolioCards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .portfolioBox {
     display: flex;
     flex-wrap: wrap;
@@ -358,4 +424,7 @@ footer {
   .p3 {
     flex-grow: 1;
   }
+
+  /* ----------- section CONTACT ----------- */
+  /* title, form, social media */
 }
