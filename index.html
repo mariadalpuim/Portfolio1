@@ -10,6 +10,15 @@
 </head>
 <body>
     <header>
+        <section class="heroSection">
+            <img class="heroImage" src="./img/lum3n--RBuQ2PK_L8-unsplash.jpg" alt="technology image">
+            <div class="heroText">
+                <p>&lt;Hello World&gt;</p>
+                <h1>I'm Maria</h1>
+                <p>Soon to be a Front End Developer!</p>
+                <button class="hireMe">Let's talk!</button>
+            </div>
+        </section>
         <div class="topContainer">
             <h1 id="myName">@MARIADALPUIM</h1>
                 <div id="logos" class="logos">
@@ -38,15 +47,6 @@
                 </nav>
             </div>
         </div>
-        <section class="heroSection">
-            <img class="heroImage" src="./img/lum3n--RBuQ2PK_L8-unsplash.jpg" alt="technology image">
-            <div class="heroText">
-                <p>&lt;Hello World&gt;</p>
-                <h1>I'm Maria</h1>
-                <p>Soon to be a Front End Developer!</p>
-                <button class="hireMe">Let's talk!</button>
-            </div>
-        </section>
     </header>
     <main>
         <section class="about">
@@ -98,30 +98,32 @@
             <h1>Get in touch</h1>
             <div class="contactFlex">
                 <div class="formContainer">
-                    <label for="name">Name</label><br>
-                    <input type="text" name="name" id="name"><br>
+                    <div class="alignForm">
+                        <label for="name">Name</label><br>
+                        <input type="text" name="name" id="name"><br>
 
-                    <label for="email">E-mail</label><br>
-                    <input type="email" name="email" id="email"><br>
+                        <label for="email">E-mail</label><br>
+                        <input required type="email" name="email" id="email"><br>
+                        <!-- why required isn't working? div? -->
 
-                    <label for="message">Your message</label><br>
-                    <textarea name="message" id="message" cols="30" rows="10"></textarea><br>
-
+                        <label class="message" for="message">Your message</label><br>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Please let me know what you are looking for and your details."></textarea><br>
+                    </div>
                     <!-- yet to find out if this works -->
                     <form action="mailto:mariadalpuim@gmail.com" method="get" enctype="text/plain"></form>
                     <input type="submit" value="Send me your message">
                 </div>
-                <div class="socialMedia">
+                <!-- <div class="socialMedia">
                     <i class="fab fa-linkedin"></i>
                     <i class="fab fa-github"></i>
                     <i class="fab fa-instagram"></i>
-                </div>
+                </div> not including because it repeats from the top-->
             </div>
         </section>
     </main>
     <footer>
-        <p>CopyRight</p>
-        <p>©</p>
+        <p class="adjustFooter">copyright</p>
+        <p class="adjustFooter">©</p>
         <p>MARIADALPUIM</p>
 
     </footer>

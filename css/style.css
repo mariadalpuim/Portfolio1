@@ -1,19 +1,19 @@
 /* ----------- defaults -----------  */
 /* ----------- body ----------- */
 /* ----------- header ----------- */
-/* topContainer (myName, logos) Nav (optionsBar, button, optionsList), heroSection */
+/* heroSection, absolute - topContainer (myName, logos) Nav (optionsBar, button, optionsList),  */
 /* ----------- TOP ----------- */
 /* ----------- NAV ----------- */
 /* ----------- HERO ----------- */
 
 /* ----------- main ----------- */
-/* about, portfolio (p1, p2, p3), contact (form, social media) */
+/* about, portfolio (p1, p2, p3), contact (form) */
 /* ----------- section ABOUT ----------- */
 /* text and image */
 /* ----------- section PORTFOLIO ----------- */
 /* container, p1, p2, p3 */
 /* ----------- section CONTACT ----------- */
-/* title, form, social media */
+/* title, form, */
 
 /* ----------- footer ----------- */
 /* Name, copyright */
@@ -30,7 +30,8 @@
   other text rgb(114, 97, 97)
   main background rgba(229, 195, 195, 255)
   second background rgba(179, 207, 210, 255)
-  blurr backgrounds rgb(206,175,175) */
+  blurr backgrounds rgb(206,175,175)
+  box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.49); */
 
 /* ----------- defaults -----------  */
 * {
@@ -40,7 +41,8 @@
 }
 
 h1,
-h2 {
+h2,
+li {
   color: rgb(68, 58, 58);
 }
 
@@ -63,10 +65,17 @@ a {
 }
 
 button,
-input[type="submit"] {
+input[type="submit"],
+i,
+li {
   cursor: pointer;
   border: none;
   border-radius: 5px;
+}
+
+button:hover {
+  box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.49);
+  background-color: white;
 }
 
 .desktopView {
@@ -77,6 +86,7 @@ input[type="submit"] {
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: rgba(179, 207, 210, 255);
+  /* overflow: overlay; wanted to hide scrollbar but didn't work as I wanted */
   /* background-image: linear-gradient(to bottom right, #ecd3d7, #e8c9cc); */
 }
 
@@ -88,8 +98,8 @@ body {
   position: fixed;
   width: 100%;
   align-items: center;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 1vw;
+  padding-right: 1vw;
   top: 0px;
   /* how do I make this the whole line and not transparent? it's not on top of the next absolute */
   /* why there's a space at the top? */
@@ -114,40 +124,55 @@ body {
   font-size: 30px;
 }
 
+.logos i:hover {
+  font-size: 35px;
+}
+
 /* ----------- NAV ----------- */
 .collapsible {
   background-color: rgba(229, 197, 198, 255);
   font-size: 30px;
   padding: 8px 12px;
   margin: 3px;
+  border-radius: 5px;
+  color: rgb(68, 58, 58);
 }
 
 .buttonContent {
   position: fixed;
   right: 0px;
   top: 75px;
-  background-color: rgba(179, 207, 210, 0.5);
+  background-color: rgba(179, 207, 210, 1);
   list-style-type: none;
-  padding: 20px 20px;
+  padding: 10px;
+}
+
+.buttonContent li {
+  background-color: rgba(229, 197, 198, 255);
+  padding: 5px 10px;
+  margin: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid grey;
+  color: rgb(68, 58, 58);
+}
+
+.buttonContent li:hover {
+  box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.49);
+  background-color: white;
 }
 
 /* ----------- HERO ----------- */
 
-/* .heroSection {
-  width: 100%;
-  display: block;
-  border-radius: 20px;
-I don't think I need this
-} */
-
 header {
-  position: relative;
   background-color: rgba(229, 195, 195, 255);
 }
 
 .heroSection img {
-  width: 100%;
-  margin-top: 75px;
+  position: relative;
+  width: 100vw;
+  margin-top: 10vh;
 }
 
 .heroText {
@@ -156,8 +181,8 @@ header {
   border-radius: 5px;
   padding: 5px;
   position: absolute;
-  top: 100px;
-  left: 20px;
+  top: 14vh;
+  left: 5vw;
   text-align: center;
 }
 
@@ -176,8 +201,13 @@ header {
   /* box-shadow: 8px; - not working, check later */
 }
 
+.hireMe:hover {
+  background-color: white;
+  /* box-shadow: 8px; - not working, check later */
+}
+
 /* ----------- main ----------- */
-/* about, portfolio (p1, p2, p3), contact (form, social media) */
+/* about, portfolio (p1, p2, p3), contact (form) */
 
 /* ----------- section ABOUT ----------- */
 /* text and image */
@@ -185,25 +215,45 @@ header {
 .about {
   /* background-color: rgb(230, 240, 240); */
   /* deciding if giving it another color or not */
-  padding: 5px;
+  padding: 1vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
 }
 
 /* ----------- section PORTFOLIO ----------- */
 /* container, p1, p2, p3 */
 
 .portfolio {
-  background-color: rgba(179, 207, 210, 255);
-  padding: 5px;
+  padding: 1vw;
+}
+
+.portfolio h1 {
+  margin-bottom: 1vh;
 }
 
 .portfolioCard {
-  /* background-color: rgba(206, 175, 175, 0.5); */
-  width: 90vw;
+  width: 80vw;
   margin-right: auto;
   margin-left: auto;
-  background-color: rgba(229, 195, 195, 1);
+  /* background-color: rgba(229, 195, 195, 1); */
   margin-bottom: 20px;
-  /* border: 1px solid grey; */
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+.portfolioCard:hover {
+  background-color: rgba(229, 195, 195, 1);
+  box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.49);
+}
+
+.portfolioCard:hover .portfolioImage {
+  color: white;
+  background-color: rgba(229, 195, 195, 1);
+}
+
+.portfolioLinks a:hover {
+  font-size: 14px;
+  text-decoration: none;
+  background-color: white;
 }
 
 .portfolioItemTitle {
@@ -221,7 +271,7 @@ header {
 }
 
 .portfolioInfo {
-  font-size: 14px;
+  font-size: 2vh;
   text-align: justify;
   margin: 10px 25px;
 }
@@ -233,40 +283,70 @@ header {
 
 .portfolioLinks a {
   font-size: 14px;
+  text-align: center;
   text-decoration: none;
-  background-color: rgba(179, 207, 210, 255);
+  background-color: rgba(229, 195, 195, 1);
   border-radius: 5px;
   padding: 8px;
+  border: 1px solid grey;
 }
 
 /* ----------- section CONTACT ----------- */
-/* title, form, social media */
+/* title, form */
 
 .contact {
   /* background-color: rgb(139, 85, 160); */
-  padding: 5px;
-}
-
-.contactFlex {
-  display: flex;
+  padding: 1vw;
+  margin-bottom: 1vh;
 }
 
 .formContainer {
-  background-color: rgba(179, 207, 210, 255);
+  display: block;
+  text-align: center;
+  color: rgb(68, 58, 58);
+  background-color: rgba(229, 195, 195, 1);
   border-radius: 10px;
   padding: 10px;
-  margin: 5px;
+  margin-top: 1vh;
+  text-decoration: none;
 }
+
+.alignForm {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+input,
+textarea {
+  border: none;
+  border-radius: 5px;
+}
+
+input {
+  padding: 4px 55px;
+}
+
+/* textarea {
+  padding: 4px 10px;
+} */
 
 input[type="submit"] {
-  margin-top: 5px;
-  padding: 5px 10px;
-  background-color: rgba(248, 196, 228, 0.5);
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(68, 58, 58);
+  background-color: rgba(179, 207, 210, 255);
+  border-radius: 5px;
+  padding: 8px;
+  border: 1px solid grey;
+  margin-top: 1vh;
 }
 
-.socialMedia {
-  display: flex;
-  flex-direction: column;
+input[type="submit"]:hover {
+  background-color: white;
+  box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.49);
 }
 
 /* ----------- footer ----------- */
@@ -274,15 +354,22 @@ input[type="submit"] {
 footer {
   display: inline-flex;
   width: 100%;
+  justify-content: center;
+  padding-bottom: 20px;
+  font-weight: bold;
   /* find out why this and top are not a full lenght box */
+}
+
+footer p {
+  color: rgb(68, 58, 58);
+}
+
+.adjustFooter {
+  margin-right: 5vw;
 }
 
 /* MOBILE FIRST APPROACH - TABLET BELLOW */
 @media screen and (min-width: 501px) and (max-width: 800px) {
-  /* body {
-    background-color: yellowgreen;
-  } */
-
   .portfolioCards {
     display: flex;
     flex-wrap: wrap;
@@ -291,9 +378,16 @@ footer {
   .portfolioCard {
     width: 45vw;
   }
-}
 
-/* need to ajudt item here after destkop */
+  /* .contactFlex {
+    display: flex;
+  } flexing, only needed if adding the social media */
+
+  /* .socialMedia {
+    display: flex;
+    flex-direction: column;
+  } */
+}
 
 /* MOBILE FIRST APPROACH - DESKTOP BELLOW */
 @media screen and (min-width: 801px) {
@@ -308,32 +402,10 @@ footer {
   }
 
   /* ----------- body ----------- */
-
-  body {
-    /* display: block;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto; */
-    /* I think I just need this in desktop view */
-  }
-
-  /* check if needed?
-  .about,
-  .portfolio,
-  .contact {
-    background-color: #ffc702;
-    margin: 5px 0px;
-    margin: 10px;
-    border-radius: 5px;
-    padding: 5px;
-  } */
-
   /* ----------- header ----------- */
   /* topContainer (myName, logos) Nav (optionsBar, button, optionsList), heroSection */
-  /* ----------- TOP ----------- */
-
   /* ----------- NAV ----------- */
-
+  /* ----------- TOP ----------- */
   /* reversing the order of the top components */
   .topContainer {
     display: flex;
@@ -354,12 +426,24 @@ footer {
     display: flex;
     list-style-type: none;
     justify-content: space-evenly;
+    list-style-type: none;
+    padding: 10px;
   }
 
   .optionsList li {
     background-color: rgba(229, 197, 198, 255);
     padding: 5px 10px;
     margin: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid grey;
+    color: rgb(68, 58, 58);
+  }
+
+  .optionsList li:hover {
+    box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.49);
+    background-color: white;
   }
 
   .logos {
@@ -373,29 +457,14 @@ footer {
     color: white;
     font-size: 30px;
   }
+  /* 
+  waiting for help to decide - need to position against the img
+  .heroText {
+    top: 10%;
+    left: 10%w;
+  } */
 
   /* ----------- HERO ----------- */
-
-  /* Will I need these two hero stylings?
-  .hero {
-    width: 900px;
-    display: block;
-    border-radius: 20px;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-text {
-    background-color: rgba(255, 242, 117, 0.5);
-    display: inline-block;
-    border-radius: 5px;
-    padding: 15px;
-    position: absolute;
-    top: 200px;
-    right: 200px;
-    text-align: center; 
-  }*/
 
   .heroSection img {
     width: 700px;
@@ -409,7 +478,7 @@ footer {
   }
 
   /* ----------- main ----------- */
-  /* about, portfolio (p1, p2, p3), contact (form, social media) */
+  /* about, portfolio (p1, p2, p3), contact (form) */
   /* ----------- section ABOUT ----------- */
   /* text and image */
   /* ----------- section PORTFOLIO ----------- */
@@ -425,7 +494,7 @@ footer {
   }
 
   /* ----------- section CONTACT ----------- */
-  /* title, form, social media */
+  /* title, form, */
 }
 
 /* MOBILE FIRST APPROACH - LARGE DESKTOP BELLOW */
