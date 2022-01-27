@@ -172,7 +172,7 @@ header {
 .heroSection img {
   position: relative;
   width: 100vw;
-  margin-top: 10vh;
+  margin-top: 70px;
 }
 
 .heroText {
@@ -181,7 +181,7 @@ header {
   border-radius: 5px;
   padding: 5px;
   position: absolute;
-  top: 14vh;
+  top: 105px;
   left: 5vw;
   text-align: center;
 }
