@@ -271,7 +271,7 @@ header {
 }
 
 .portfolioInfo {
-  font-size: 2vh;
+  font-size: 18px;
   text-align: justify;
   margin: 10px 25px;
 }
@@ -374,6 +374,23 @@ footer p {
     display: flex;
     flex-wrap: wrap;
   }
+
+  /* do I need this? makes no difference
+   .p1 {
+    flex: 0 1 47%;
+  }
+
+  .p2 {
+    flex: 0 1 47%;
+  }
+
+  .p3 {
+    flex: 0 1 47%;
+  }
+
+  .p4 {
+    flex: 0 1 47%;
+  } */
 
   .portfolioCard {
     width: 45vw;
