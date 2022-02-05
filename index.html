@@ -22,38 +22,40 @@
         <div class="topContainer">
             <h1 id="myName">@MARIADALPUIM</h1>
                 <div id="logos" class="logos">
-                    <i class="fab fa-linkedin"></i>
-                    <i class="fab fa-github"></i>
-                    <i class="fab fa-instagram"></i>
+                    <a href="https://www.linkedin.com/in/mariadalpuim/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/mariadalpuim" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/littlemaryaroundtheworld/" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
                 <nav id="navOptions">
-                    <ul class="buttonContent mobileView"> 
-                        <li>About</li> 
-                        <li>Portfolio</li>
-                        <li>Contact</li>
+                    <ul id="buttonContent" class="buttonContent mobileView"> 
+                        <!-- the links are not sending to the 
+                        top of the section - investigate -->
+                        <li><a href="#about">About</a></li> 
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                     <!-- same list as buttonContent, but only for desktop view -->
                     <ul class="optionsList desktopView"> 
-                        <li>About</li> 
-                        <li>Portfolio</li>
-                        <li>Contact</li>
+                        <li><a href="#about">About</a></li>  
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                     <!-- waiting to learn javascript to 
                         make this list only appear when 
                         clicking in the menu. -->
                     <div class="optionsButton mobileView">
-                        <button class="collapsible" type="button"><i class="fas fa-bars"></i></button>
+                        <button id="collapsible" class="collapsible" onclick="expandButton()" type="button"><i class="fas fa-bars"></i></button>
                     </div>
                 </nav>
             </div>
         </div>
     </header>
     <main>
-        <section class="about">
+        <section class="about" id="about">
             <h1>About me</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ipsam tenetur? Sed, nam placeat laborum autem nihil esse nemo vel minus voluptas ducimus, numquam animi doloribus similique exercitationem id asperiores.</p>
         </section>
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
             <h1>Portfolio</h1>
             <div class="portfolioCards">
                 <div class="portfolioCard p1">
@@ -94,7 +96,7 @@
                 </div>
             </div>
         </section>
-        <section class="contact">
+        <section class="contact" id="contact">
             <h1>Get in touch</h1>
             <div class="contactFlex">
                 <div class="formContainer">
@@ -111,7 +113,7 @@
                     </div>
                     <!-- yet to find out if this works -->
                     <form action="mailto:mariadalpuim@gmail.com" method="get" enctype="text/plain"></form>
-                    <input type="submit" value="Send me your message">
+                    <input id="submitMessage" type="submit" value="Send me your message">
                 </div>
                 <!-- <div class="socialMedia">
                     <i class="fab fa-linkedin"></i>
@@ -127,5 +129,6 @@
         <p>MARIADALPUIM</p>
 
     </footer>
+    <script src="./app.js"></script>
 </body>
 </html>
