@@ -10,6 +10,8 @@ btn.onclick = function () {
   }
 };
 
+// why do I need to click twice?
+
 // it's working. now I want to add that it hides
 // when we select one of the options. prob need
 // and if or a loop/
