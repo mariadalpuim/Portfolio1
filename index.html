@@ -27,12 +27,12 @@
                     <a href="https://www.instagram.com/littlemaryaroundtheworld/" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
                 <nav id="navOptions">
-                    <ul id="buttonContent" class="buttonContent mobileView"> 
+                    <ul id="btnOptions" class="buttonContent mobileView"> 
                         <!-- the links are not sending to the 
                         top of the section - investigate -->
-                        <li><a href="#about">About</a></li> 
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a id="btnOp1" href="#about">About</a></li> 
+                        <li><a id="btnOp2" href="#portfolio">Portfolio</a></li>
+                        <li><a id="btnOp3" href="#contact">Contact</a></li>
                     </ul>
                     <!-- same list as buttonContent, but only for desktop view -->
                     <ul class="optionsList desktopView"> 
@@ -44,7 +44,7 @@
                         make this list only appear when 
                         clicking in the menu. -->
                     <div class="optionsButton mobileView">
-                        <button id="collapsible" class="collapsible" onclick="expandButton()" type="button"><i class="fas fa-bars"></i></button>
+                        <button id="burguerBtn" class="collapsible" type="button"><i class="fas fa-bars"></i></button>
                     </div>
                 </nav>
             </div>
