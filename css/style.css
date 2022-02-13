@@ -308,33 +308,28 @@ header {
   color: rgb(68, 58, 58);
   background-color: rgba(229, 195, 195, 1);
   border-radius: 10px;
-  padding: 10px;
+  padding: 20px 40px;
   margin-top: 1vh;
+  margin-right: 10vw;
+  margin-left: 10vw;
   text-decoration: none;
-}
-
-.alignForm {
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
   text-align: left;
 }
 
 input,
 textarea {
-  border: none;
+  width: 100%;
+  padding: 4px 12px;
+  margin: 5px 0px;
   border-radius: 5px;
+  border: 0px;
 }
-
-input {
-  padding: 4px 55px;
-}
-
-/* textarea {
-  padding: 4px 10px;
-} */
 
 input[type="submit"] {
+  width: 200px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
   font-size: 14px;
   text-align: center;
   text-decoration: none;
