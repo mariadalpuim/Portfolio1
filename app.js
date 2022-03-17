@@ -30,3 +30,36 @@ hideNavBar = () => {
 document.querySelector('#btnOp1').addEventListener('click', hideNavBar)
 document.querySelector('#btnOp2').addEventListener('click', hideNavBar)
 document.querySelector('#btnOp3').addEventListener('click', hideNavBar)
+
+// store data from the submitted form
+// variable to hold the data
+let storedData;
+
+// function to first create an object with the values of each person
+// then if consoles the storeddata
+// transform the object into a string (because local storage stores eveyrthing as a string)
+
+// not working - error Uncaught TypeError: Cannot read properties of null (reading 'value')
+// keep comparing with project 22 and google the issue
+
+formStore = (e) => {
+  storedData = {
+    name: document.querySelector("#name").value,
+    email: document.querySelector("#email").value,
+    phone: document.querySelector("#phone").value,
+    message: document.querySelector("#message").value,
+  };
+
+  console.log(storedData);
+
+  storedData = JSON.stringify(storedData);
+
+  console.log(storedData);
+
+  // then we move to the sessionStoreage bit of code, where we put it in the local sotrage
+  sessionStorage.setItem("SessionFormData", storedData);
+  console.log(sessionStorage.getItem("SessionFormData"));
+  e.preventDefault();
+}
+
+document.querySelector("form").addEventListener("submit", formStore);
